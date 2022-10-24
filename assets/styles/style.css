@@ -331,8 +331,8 @@ nav ul li a:hover {
 	color: white;
 }
 .card .content > button {
-	background-color: var(--primary);
-	color: var(--light);
+	color: var(--primary);
+	background-color: transparent;
 	border: none;
 	width: 70px;
 	opacity: 0.9;

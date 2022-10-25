@@ -14,9 +14,10 @@ html,
 }
 body {
 	font-family: "Times New Roman", Times, serif;
-	overflow-x: hidden;
-	height: 100%;
+	/* width: 100px; */
+	/* height: 100%; */
 	background-color: #0f172a;
+	overflow-x: hidden;
 }
 
 h3 {
@@ -64,6 +65,7 @@ nav {
 	align-items: center;
 	box-shadow: 0 2px 4px 0 rgba(1, 1, 1, 0.1);
 	font-size: 20px;
+	overflow-x: hidden;
 }
 
 nav ul {

@@ -259,38 +259,39 @@ nav ul li a:hover {
 }
 .service-container {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-areas: "product event live";
-	box-shadow: 1px 3px 5px -3px rgba(0, 0, 0, 0.48);
-	-webkit-box-shadow: 1px 3px 5px -3px rgba(0, 0, 0, 0.48);
-	-moz-box-shadow: 1px 3px 5px -3px rgba(0, 0, 0, 0.48);
+	grid-template-columns: auto-fit;
+	grid-auto-flow: column;
 	gap: 10px;
+	overflow-x: scroll;
+	padding: 20px 5px;
 }
 
-.event {
+.service-container .product {
 	color: var(--light);
+	background-color: #132238;
+	border-radius: 10px;
+	width: 300px;
+	box-shadow: 3px 3px 5px -3px rgba(255, 255, 255, 0.396);
+	-webkit-box-shadow: 3px 3px 5px -3px rgba(255, 255, 255, 0.396);
+	-moz-box-shadow: 3px 3px 5px -3px rgba(255, 255, 255, 0.396);
 }
-.product {
-	padding-top: 20px;
-	color: var(--light);
-}
-.live {
-	color: var(--light);
-}
+
 .service-container h3 {
 	font-size: 35px;
 	padding-left: 20px;
 	line-height: 60px;
 	color: var(--primary);
 	margin: auto;
+	text-align: center;
 }
 .service-container p {
-	padding-left: 20px;
+	padding: 5px 10px;
 	font-size: 17px;
 	margin: auto;
+	text-align: center;
 }
 .service-container img {
-	max-width: 150px;
+	width: 30vmin;
 	display: block;
 	margin: auto;
 }
@@ -304,10 +305,10 @@ nav ul li a:hover {
 }
 
 .card {
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.115);
 	transition: 0.3s;
 	border-radius: 10px;
-	background-color: #111111a8;
+	background-color: #132238;
 	overflow: hidden;
 	margin: 80px auto;
 	box-sizing: border-box;
@@ -329,10 +330,10 @@ nav ul li a:hover {
 	text-align: center;
 	padding: 20px 0;
 	width: 100%;
-	color: white;
+	color: var(--primary);
 }
 .card .content > button {
-	color: var(--primary);
+	color: var(--light);
 	background-color: transparent;
 	border: none;
 	width: 70px;
@@ -593,14 +594,9 @@ td {
 	}
 
 	.service-container {
-		display: flex;
-		flex: 100%;
-		align-items: stretch;
-		flex-direction: column;
-	}
-	.service-container h3 {
-		padding-left: 20px;
-		text-align: left;
+		padding: 20px 10px;
+		overflow-x: auto;
+		scroll-snap-align: start;
 	}
 
 	.prev,
@@ -662,7 +658,7 @@ td {
 		flex-direction: column;
 	}
 	.avatar-container {
-		width: 90vmin;
+		width: 90%;
 		background-size: cover;
 	}
 	.biodata-container {

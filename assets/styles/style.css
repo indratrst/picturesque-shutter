@@ -7,7 +7,6 @@ html,
 	--secondary: #64748b;
 	--light: #cbd5e1;
 	scroll-behavior: smooth;
-	overflow-x: hidden;
 }
 @font-face {
 	font-family: "Tiro Devanagari Marathi";
@@ -15,9 +14,8 @@ html,
 }
 body {
 	font-family: "Times New Roman", Times, serif;
-	/* width: 100px; */
-	/* height: 100%; */
 	background-color: #0f172a;
+	overflow-x: hidden;
 }
 
 h3 {
@@ -60,12 +58,11 @@ nav {
 	background-color: var(--dark);
 	justify-content: space-between;
 	padding: 20px 0;
-	/* color: rgb(111, 111, 111); */
 	height: 25px;
 	align-items: center;
 	box-shadow: 0 2px 4px 0 rgba(1, 1, 1, 0.1);
 	font-size: 20px;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 nav ul {
@@ -75,6 +72,7 @@ nav ul {
 	justify-content: space-evenly;
 	position: absolute;
 	right: 15px;
+	overflow-x: hidden;
 }
 
 nav ul li a {
@@ -146,17 +144,21 @@ nav ul li a:hover {
 
 /* Jumbotron */
 .jumbotron-container {
-	/* max-height: 470px; */
+	max-height: 470px;
+	width: 100%;
+	/* margin: auto; */
 	padding: 0 0%;
+	overflow-x: hidden;
 }
 
 .carousel {
 	display: none;
 }
 .carousel-container img {
-	max-height: 89vmin;
+	height: 89vmin;
 	width: 100%;
 	object-fit: cover;
+	object-position: center;
 }
 
 .carousel-container {
@@ -555,6 +557,9 @@ td {
 }
 
 @media screen and (max-width: 576px) {
+	.carousel-container img {
+		height: 50vmin;
+	}
 	.menu {
 		order: 1;
 		justify-items: end;

@@ -645,7 +645,7 @@ td {
 		display: grid;
 		justify-items: center;
 		grid-template-columns: repeat(5, 1fr);
-		gap: 10px;
+		gap: 25px;
 		overflow-x: scroll;
 	}
 	.card-container::-webkit-scrollbar {
@@ -661,7 +661,7 @@ td {
 		margin: 40px auto;
 		box-sizing: border-box;
 		width: 200px;
-		height: 500px;
+		height: 450px;
 	}
 
 	.card .header {
@@ -678,9 +678,10 @@ td {
 	}
 
 	.card .content {
-		text-align: center;
-		padding: 20px 0;
+		box-sizing: border-box;
+		padding: 30px 0;
 		width: 100%;
+		/* background-color: #ffffff; */
 		color: var(--primary);
 	}
 	.card .content > button {

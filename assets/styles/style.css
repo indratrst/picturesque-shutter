@@ -265,7 +265,7 @@ nav ul li a:hover {
 	display: grid;
 	grid-template-columns: auto-fit;
 	grid-auto-flow: column;
-	gap: 10px;
+	gap: 50px;
 	overflow-x: scroll;
 	padding: 20px 5px;
 }
@@ -275,10 +275,12 @@ nav ul li a:hover {
 }
 
 .service-container .product {
+	display: grid;
 	color: var(--light);
 	background-color: #132238;
 	border-radius: 10px;
 	width: 300px;
+	height: 320px;
 	box-shadow: 2px 2px 5px -3px rgba(255, 255, 255, 0.396);
 	-webkit-box-shadow: 2px 2px 5px -3px rgba(255, 255, 255, 0.396);
 	-moz-box-shadow: 2px 2px 5px -3px rgba(255, 255, 255, 0.396);
@@ -308,8 +310,10 @@ nav ul li a:hover {
 .card-container {
 	max-width: 1000px;
 	margin: 10px auto;
-	display: flex;
-	justify-content: center;
+	display: grid;
+	justify-items: center;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 10px;
 }
 
 .card {
@@ -318,7 +322,7 @@ nav ul li a:hover {
 	border-radius: 10px;
 	background-color: #132238;
 	overflow: hidden;
-	margin: 80px auto;
+	margin: 40px auto;
 	box-sizing: border-box;
 }
 
@@ -504,7 +508,6 @@ td {
 	align-items: center;
 	flex-direction: column;
 	font-size: 3.1vmin;
-	overflow-y: hidden;
 }
 
 .footer-container p {
@@ -513,6 +516,7 @@ td {
 	position: absolute;
 	z-index: 999;
 	margin-top: 120px;
+	text-align: center;
 }
 
 .footer-container img {
@@ -620,10 +624,6 @@ td {
 		bottom: 8px;
 	}
 
-	.card-container {
-		flex-direction: column;
-		width: 87%;
-	}
 	.container-profile {
 		flex-direction: column;
 	}
@@ -638,24 +638,67 @@ td {
 		flex-direction: column;
 	}
 
+	/* card */
+	.card-container {
+		width: 100%;
+		margin: 10px auto;
+		display: grid;
+		justify-items: center;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 10px;
+		overflow-x: scroll;
+	}
+	.card-container::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	.card {
+		box-shadow: 0 4px 8px 0 rgba(175, 175, 175, 0.115);
+		transition: 0.3s;
+		border-radius: 10px;
+		background-color: #132238;
+		overflow: hidden;
+		margin: 40px auto;
+		box-sizing: border-box;
+		width: 200px;
+		height: 500px;
+	}
+
 	.card .header {
-		max-height: 560px;
+		max-height: 475px;
 		/* background-color: #666; */
 		overflow: hidden;
 	}
 
 	.header img {
-		width: 50vmin;
+		width: 200px;
+		vertical-align: middle;
+		object-fit: cover;
+		background-position: center;
 	}
 
 	.card .content {
 		text-align: center;
 		padding: 20px 0;
 		width: 100%;
+		color: var(--primary);
+	}
+	.card .content > button {
+		color: var(--light);
+		background-color: transparent;
+		border: none;
+		width: 70px;
+		opacity: 0.9;
+	}
+
+	.card:hover {
+		z-index: 0;
+		cursor: pointer;
 	}
 
 	.card.besar {
 		transform: scale(1);
+		z-index: 0;
 	}
 
 	.card.medium {

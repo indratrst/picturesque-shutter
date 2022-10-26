@@ -279,8 +279,8 @@ nav ul li a:hover {
 	color: var(--light);
 	background-color: #132238;
 	border-radius: 10px;
-	width: 300px;
-	height: 320px;
+	width: 50vmin;
+	height: 55vmin;
 	box-shadow: 2px 2px 5px -3px rgba(255, 255, 255, 0.396);
 	-webkit-box-shadow: 2px 2px 5px -3px rgba(255, 255, 255, 0.396);
 	-moz-box-shadow: 2px 2px 5px -3px rgba(255, 255, 255, 0.396);
@@ -296,7 +296,7 @@ nav ul li a:hover {
 }
 .service-container p {
 	padding: 5px 10px;
-	font-size: 17px;
+	font-size: 3vmin;
 	margin: auto;
 	text-align: center;
 }

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				--primary: #213e86;
+				--third: #2e3d91;
+				--ters: rgb(22, 30, 85);
+				--dark: #000000;
+				--secondary: #64748b;
+				--light: #ffffff;
+				scroll-behavior: smooth;
+				box-sizing: border-box;
+			}
+
+			body {
+				background-color: var(--light);
+				font-family: "Fira-Code", sans-serif;
+			}
+			.card-container {
+				padding-top: 40px;
+				padding-bottom: 40px;
+				width: 100%;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 1fr;
+				background-color: #f1f5f9;
+			}
+			.card-container .wrapping {
+				/* width: 500px; */
+				margin: 70px 40px;
+				padding-left: 0px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				gap: 20px;
+				color: #7c7676;
+			}
+
+			.card-container .wrapping h2 {
+				letter-spacing: 5px;
+				font-size: 6.1vmin;
+				white-space: nowrap;
+				color: var(--third);
+			}
+			.card-container .wrapping h3 {
+				font-size: 1.5em;
+			}
+			.card-container .wrapping p {
+				font-size: 17px;
+				line-height: 1.5em;
+				text-shadow: none;
+				/* width: 450px; */
+			}
+			.card {
+				display: grid;
+				grid-template-columns: 1fr;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.115);
+				transition: 0.3s;
+				border-radius: 10px;
+				background-color: var(--light);
+				overflow: hidden;
+				margin: 50px 10px;
+				width: 75vmin;
+				height: 70vmin;
+				box-sizing: border-box;
+			}
+
+			.card .header {
+				margin: auto;
+				box-sizing: border-box;
+			}
+			.card .header img {
+				display: block;
+				margin: auto auto;
+				box-sizing: border-box;
+				width: 70%;
+				height: 100%;
+				border-radius: 5px;
+			}
+
+			.card .content {
+				padding: 40px 20px;
+				display: flex;
+				gap: 8px;
+				flex-direction: column;
+				line-height: 1.5em;
+				color: var(--secondary);
+			}
+			.card .content > h5 {
+				color: var(--primary);
+
+				border: none;
+				opacity: 0.7;
+			}
+			.card .content > button {
+				display: flex;
+				justify-content: center;
+				align-self: flex-end;
+				align-items: center;
+				margin-right: 40px;
+				margin-top: 10px;
+				color: var(--primary);
+				width: 80px;
+				height: 27px;
+				background-color: var(--light);
+				border-radius: 7px;
+				border: 1px solid #213e86;
+			}
+			.card .content button:hover {
+				background-color: var(--primary);
+				color: var(--light);
+			}
+			.card .content p {
+				font-size: 0.9em;
+				color: var(--secondary);
+			}
+			.card .content h2 {
+				color: var(--third);
+			}
+		</style>
+	</head>
+	<body>
+		<article class="card-container">
+			<div class="wrapping">
+				<h2>Experience Journey</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, est illo perferendis, voluptates numquam quibusdam officia placeat tenetur aspernatur, aperiam sit. .</p>
+			</div>
+			<div class="group">
+				<div class="arrow">
+					<button class="left" id="left"><span class="arrow-left"></span></button>
+					<button class="right" id="right"><span class="arrow-right"></span></button>
+				</div>
+				<div class="slider">
+					<div class="slider-inner">
+						<div class="card">
+							<div class="header"><img src="assets/img/crew1.jpg" alt="" /></div>
+							<div class="content">
+								<h5>Garden Coffe - 2019.</h5>
+								<h2>Lorem ipsum dolor sit.</h2>
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi ea repellendus quidem possimus nihil.</p>
+							</div>
+						</div>
+						<div class="card">
+							<div class="header"><img src="assets/img/crew2.jpg" alt="beach" /></div>
+							<div class="content">
+								<h5>Garden Coffe - 2019.</h5>
+								<h2>Lorem ipsum dolor sit.</h2>
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi ea repellendus quidem possimus nihil.</p>
+								<!-- <button>EVENT</button> -->
+							</div>
+						</div>
+						<div class="card">
+							<div class="header"><img src="assets/img/crew3.jpg" alt="donut" /></div>
+							<div class="content">
+								<h5>Garden Coffe - 2019.</h5>
+								<h2>Lorem ipsum dolor sit.</h2>
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi ea repellendus quidem possimus nihil.</p>
+								<!-- <button>PRODUCT</button> -->
+							</div>
+						</div>
+						<div class="card">
+							<div class="header"><img src="assets/img/crew1.jpg" alt="gentleman" /></div>
+							<div class="content">
+								<h5>Garden Coffe - 2019.</h5>
+								<h2>Lorem ipsum dolor sit.</h2>
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi ea repellendus quidem possimus nihil.</p>
+								<!-- <button>LIVE</button> -->
+							</div>
+						</div>
+						<div class="card">
+							<div class="header"><img src="assets/img/crew2.jpg" alt="sunday" /></div>
+							<div class="content">
+								<h5>Garden Coffe - 2019.</h5>
+								<h2>Lorem ipsum dolor sit.</h2>
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi ea repellendus quidem possimus nihil.</p>
+								<!-- <button>EVENT</button> -->
+							</div>
+						</div>
+						<div class="card">
+							<div class="header"><img src="assets/img/crew3.jpg" alt="sunday" /></div>
+							<div class="content">
+								<h5>Garden Coffe - 2019.</h5>
+								<h2>Lorem ipsum dolor sit.</h2>
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi ea repellendus quidem possimus nihil.</p>
+								<!-- <button>EVENT</button> -->
+							</div>
+						</div>
+						<div class="card">
+							<div class="header"><img src="assets/img/crew3.jpg" alt="sunday" /></div>
+							<div class="content">
+								<h5>Garden Coffe - 2019.</h5>
+								<h2>Lorem ipsum dolor sit.</h2>
+								<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi ea repellendus quidem possimus nihil.</p>
+								<!-- <button>EVENT</button> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+	</body>
+</html>

@@ -631,7 +631,8 @@ footer {
 }
 
 .group-article h3::before,
-.link-section h3::before {
+.
+-section h3::before {
 	content: " ";
 	white-space: pre;
 	border-left: 5px solid;
@@ -680,8 +681,17 @@ footer {
 }
 
 .link-section ul,
-.link-sectionli,
-.link-sectiona {
+.link-section li,
+.link-section a {
+	text-decoration: none;
+	list-style-type: none;
+	color: var(--secondary);
+	padding: 5px;
+}
+
+.group-article ul,
+.group-article li,
+.group-article a {
 	text-decoration: none;
 	list-style-type: none;
 	color: var(--secondary);
